@@ -1,0 +1,211 @@
+.hardware__grid {
+  width: 980px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  grid-gap: 6px;
+}
+@media (max-width: 1279px) {
+  .hardware__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    width: 645px;
+  }
+}
+@media (max-width: 767px) {
+  .hardware__grid {
+    width: 320px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.hardware__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.9);
+  border: 2px solid var(--main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  opacity: 0;
+  color: #9a266a;
+  font-size: 15px;
+  line-height: 21px;
+  transition: 0.5s;
+}
+.hardware__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.hardware__img picture {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+}
+.hardware__img img {
+  transition: 0.5s;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+.hardware__item {
+  position: relative;
+  height: 200px;
+}
+@media (max-width: 1279px) {
+  .hardware__item {
+    order: 1;
+  }
+  .hardware__item:nth-child(3) {
+    order: 2;
+  }
+  .hardware__item:nth-child(4) {
+    order: 4;
+  }
+  .hardware__item:nth-child(5) {
+    order: 5;
+  }
+}
+.hardware__item h3 {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 17px;
+  transition: 0.5s;
+}
+.hardware__item:hover h3 {
+  opacity: 0;
+}
+.hardware__item:hover img {
+  filter: blur(3px);
+}
+.hardware__item:hover .hardware__text {
+  opacity: 1;
+}
+@media (hover: none) {
+  .hardware__item.active h3 {
+    opacity: 0;
+  }
+  .hardware__item.active img {
+    filter: blur(3px);
+  }
+  .hardware__item.active .hardware__text {
+    opacity: 1;
+  }
+}
+.hardware__item--large {
+  height: 406px;
+  grid-row: span 2;
+}
+@media (max-width: 1279px) {
+  .hardware__item--large {
+    height: 200px;
+    grid-row: span 1;
+    order: 3;
+    grid-column: span 2;
+  }
+}
+@media (max-width: 767px) {
+  .hardware__item--large {
+    grid-column: span 1;
+  }
+}
+.hardware-info {
+  background: #f9f9f9;
+}
+.hardware-info__grid {
+  background: #fff;
+  width: 1254px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 6px;
+}
+@media (max-width: 1279px) {
+  .hardware-info__grid {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .hardware-info__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.hardware-info__item {
+  background: #f9f9f9;
+  padding: 52px 60px 55px;
+}
+@media (max-width: 1279px) {
+  .hardware-info__item {
+    padding: 52px 45px 60px;
+  }
+}
+@media (max-width: 1279px) {
+  .hardware-info__item {
+    padding: 52px 40px 60px;
+  }
+}
+.hardware-info__item h3 {
+  margin: 0;
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 15px;
+  padding-right: 50px;
+  background: #a22d71;
+  padding: 12px 40px;
+}
+.hardware-info__item:nth-child(2) h3 {
+  background: #8e2663;
+}
+.hardware-info__item:nth-child(3) h3 {
+  background: #80285c;
+}
+.hardware-info__item:nth-child(4) h3 {
+  background: #7a3a60;
+}
+.hardware-info__item:nth-child(5) h3 {
+  background: #6d425c;
+}
+.hardware-info__item:nth-child(6) h3 {
+  background: #6d5664;
+}
+.hardware-info__item p {
+  padding-left: 40px;
+  padding-right: 30px;
+  font-size: 15px;
+  color: #434343;
+  line-height: 1.4;
+  margin: 0;
+}
+@media (max-width: 1279px) {
+  .hardware-info__item p {
+    padding-right: 25px;
+  }
+}
+@media (max-width: 1279px) {
+  .hardware-info__item p {
+    padding-right: 30px;
+  }
+}
+.hardware-info__icon {
+  margin-bottom: 25px;
+  padding-left: 40px;
+}
+.hardware-info__icon img {
+  height: 60px;
+  width: auto;
+  display: block;
+}

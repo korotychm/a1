@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Century Gothic';
+}
+button,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.container {
+  width: 100%;
+  max-width: 944px;
+  margin: auto;
+}
+body {
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+main {
+  padding-top: 73px;
+  overflow: hidden;
+}
+.stick {
+  height: 30px;
+  width: 2px;
+  background: var(--main);
+  margin: 30px auto;
+}
+.frame {
+  margin: 30px auto;
+  padding: 28px 35px;
+  border: 2px solid var(--main);
+  width: 225px;
+  text-align: center;
+  color: var(--main);
+  position: relative;
+}
+.frame::before,
+.frame::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  z-index: 2;
+  height: calc(100% + 6px);
+  width: calc(100% - 30px);
+}
+.frame::after {
+  width: calc(100% + 6px);
+  height: calc(100% - 30px);
+}
+.frame p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+  z-index: 3;
+}
+.frame--tech {
+  width: 160px;
+  height: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frame--tech::before {
+  width: calc(100% - 20px);
+}
+.frame--tech::after {
+  height: calc(100% - 20px);
+}
+.frame--tech p {
+  margin-top: -2px;
+}
+.frame--tech span {
+  display: block;
+}
+.frame--tech span:first-child {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.frame--tech span:nth-child(2) {
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.frame--tech span:nth-child(3) {
+  font-size: 57px;
+  text-transform: uppercase;
+  line-height: 47px;
+}
+.btn {
+  text-decoration: none;
+  color: var(--main);
+  border: 2px solid var(--main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.5s;
+}
+.btn:hover {
+  color: #fff;
+  background: var(--main);
+}
+.text-center {
+  text-align: center;
+  margin: 30px auto;
+}
+.info-frame {
+  background: #f9f9f9;
+  padding: 25px 40px;
+  display: inline-flex;
+}
+@media (max-width: 767px) {
+  .info-frame {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+.info-frame h2 {
+  color: var(--main);
+  margin: auto;
+  text-align: center;
+  line-height: 50px;
+  border: 2px solid var(--main);
+  width: 300px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .info-frame h2 {
+    width: 100%;
+  }
+}
+.frame-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 175px;
+  object-fit: cover;
+  position: relative;
+  margin-top: 40px;
+}
+.frame-image__text {
+  width: 172px;
+  height: 87px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.frame-image__text p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+.frame-image__text span {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+.frame-image__text span:first-child {
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  top: 0;
+  left: 0;
+}
+.frame-image__text span:nth-child(2) {
+  border-right: 2px solid #fff;
+  border-top: 2px solid #fff;
+  top: 0;
+  right: 0;
+}
+.frame-image__text span:nth-child(3) {
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  bottom: 0;
+  right: 0;
+}
+.frame-image__text span:nth-child(4) {
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  bottom: 0;
+  left: 0;
+}
+.circle {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  border-radius: 50%;
+  border: 2px solid var(--main);
+}
+.circle span {
+  color: var(--main);
+  display: block;
+  font-weight: bold;
+}
+.circle span:first-child {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.circle span:nth-child(2) {
+  font-size: 13px;
+  padding-top: 2px;
+}
+.circle span:last-child {
+  font-size: 20px;
+  text-transform: uppercase;
+  position: relative;
+  top: 2px;
+}

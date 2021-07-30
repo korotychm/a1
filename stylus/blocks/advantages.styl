@@ -1,0 +1,73 @@
+.advantages
+  &__img
+    width 150px
+    height 150px
+    border-radius 50%
+    border 3px solid var(--main)
+    overflow hidden
+    display flex
+    align-items center
+    justify-content center
+    picture
+    img
+      object-fit none
+    &--square
+      border-radius 25px
+  &__text
+    padding-left 25px
+    padding-top 25px
+    position absolute
+    left 150px
+    top 0
+    span
+      background var(--main)
+      color #fff
+      font-size 16px
+      font-weight bold
+      width 50px
+      height 35px
+      display flex
+      align-items center
+      justify-content center
+    h4
+      color #434343
+      margin 25px 0 0
+      font-size 16px
+  &__grid
+    display flex
+    width 1230px
+    margin 30px auto 40px
+    @media (max-width: 1279px)
+      width 612px
+      flex-wrap wrap
+      margin-bottom -70px
+      margin-top 60px
+    @media (max-width: 767px)
+      width 280px
+  &__item
+    margin-right 190px
+    position relative
+    @media (max-width: 1279px)
+      margin-bottom 80px
+      &:nth-child(even)
+        margin-right 0
+    &:first-child
+      .advantages__img
+        border 3px solid #7f3e64
+      .advantages__text span
+        background #7f3e64
+    &:nth-child(2)
+      .advantages__img
+        border 3px solid #7c506a
+      .advantages__text span
+        background #7c506a
+    &:nth-child(3)
+      .advantages__img
+        border 3px solid #9c3b74
+      .advantages__text span
+        background #9c3b74
+    &:nth-child(4)
+      .advantages__img
+        border 3px solid #796270
+      .advantages__text span
+        background #796270

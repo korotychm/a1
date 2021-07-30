@@ -1,0 +1,218 @@
+.production-numbers
+  width 960px
+  margin auto
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+  margin-top 40px
+  @media (max-width: 1279px)
+    width 420px
+  @media (max-width: 767px)
+    width 150px
+  &__img
+    width 150px
+    height 150px
+    overflow hidden
+    img
+      width 100%
+      height auto
+      display block
+  &__counter
+    position absolute
+    width 80px
+    height 80px
+    color #fff
+    font-weight bold
+    font-size 18px
+    display flex
+    align-items center
+    justify-content center
+    bottom 55px
+    left 5px
+    transform translate(-50%,50%)
+  h3
+    position absolute
+    left 65px
+    bottom 0
+    max-width 100px
+    color #434343
+    font-size 15px
+    font-weight bold
+    margin 0
+  &__item
+    position relative
+    padding-bottom 50px
+    @media (max-width: 1279px)
+      margin-bottom 70px
+      &:nth-child(3)
+        margin-bottom 0
+        @media (max-width: 767px)
+          margin-bottom 65px
+      &:nth-child(4)
+        margin-bottom 0
+    &:nth-child(1) .production-numbers__counter
+      background #7c506a
+    &:nth-child(2) .production-numbers__counter
+      background #797478
+    &:nth-child(3) .production-numbers__counter
+      background #9c3b74
+    &:nth-child(4) .production-numbers__counter
+      background #796270
+
+
+.production-examples
+  width 600px
+  text-align center
+  margin 40px auto
+  &--rollers
+    width 440px
+  @media (max-width: 1279px)
+    width 440px
+  @media (max-width: 767px)
+    width 100%
+  &__content
+    display none
+    &.active
+      display inline-grid
+      grid-template-columns 1fr
+      grid-gap 25px
+  &__item
+    display flex
+    align-items center
+    color var(--main)
+    cursor pointer
+    user-select none
+    padding-left 10px
+    h3
+      font-weight 400
+      font-size 15px
+      margin 0
+    .music__icon
+      border 2px solid var(--main)
+      &--play svg #play
+        stroke-width 2
+
+    &.active
+      h3
+        font-weight bold
+  &__btn
+    margin-right 15px
+  &__nav
+    margin-bottom 50px
+    @media (max-width: 767px)
+      width 265px
+      margin 0 auto 50px
+    .slick-list
+      margin 0 -20px
+      @media (max-width: 767px)
+        margin 0 -12.5px
+    .slick-arrow
+      padding 0
+      width 16px
+      height 30px
+      background none
+      border 15px solid transparent
+      border-left 15px solid #acacac
+      top 23px
+      &:hover
+        @media (hover)
+          border-left 15px solid var(--main)
+          filter none
+          opacity 1
+    .slick-prev
+      left -81px
+      @media (max-width: 767px)
+        left calc((50vw - 155px) / -2 - 38px)
+    .slick-next
+      right -81px
+      @media (max-width: 767px)
+        right calc((50vw - 155px) / -2 - 38px)
+  &__nav-item
+    font-size 15px
+    font-weight bold
+    color #434343
+    text-align center
+    padding-bottom 10px
+    border-bottom 4px solid #acacac
+    margin 0 20px
+    cursor pointer
+    transition .5s
+    @media (max-width: 767px)
+      margin 0 12.5px
+    &:hover
+    &.active
+      border-color #9a266a
+    &.hovered
+      border-color #acacac
+      &:hover
+        border-color #9a266a
+
+
+
+.production-links
+  width 762px
+  margin auto
+  display grid
+  grid-template-columns minmax(0,1fr) minmax(0,1fr) minmax(0,1fr) minmax(0,1fr)
+  grid-gap 1px
+  margin-bottom 40px
+  @media (max-width: 1279px)
+    width 380px
+    grid-template-columns minmax(0,1fr) minmax(0,1fr)
+    grid-row-gap 40px
+  @media (max-width: 767px)
+    max-width calc(100% - 34px)
+  &__img
+    position relative
+    overflow hidden
+    img
+    picture
+      display block
+      max-width 100%
+      transition .5s
+  &__overlay
+    position absolute
+    width 100%
+    height 140px
+    left 0
+    bottom 0
+    background rgba(255,255,255,.35)
+    display flex
+    align-items center
+    justify-content center
+    flex-direction column
+    border-bottom 3px solid transparent
+    transition .5s
+    img
+      display inline-block
+      width 35px
+      height 35px
+      margin-bottom 20px
+      opacity 0
+      transition .5s
+    span
+      color #fff
+      font-size 14px
+      font-weight bold
+      opacity 0
+      transition .5s
+  &__item
+    text-decoration none
+    color inherit
+    h3
+      color #434343
+      text-transform uppercase
+      margin 15px 0 0
+      text-align center
+      font-size 15px
+      transition .5s
+    &:hover
+      .production-links__img picture img
+        filter blur(2px)
+      h3
+        color var(--main)
+      .production-links__overlay
+        border-color var(--main)
+        img
+        span
+          opacity 1

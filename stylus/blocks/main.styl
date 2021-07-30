@@ -1,0 +1,92 @@
+.main-section
+  padding-bottom 60px
+  padding-top 27px
+  @media (max-width: 1279px)
+    width 500px
+    margin auto
+  @media (max-width: 767px)
+    width 314px
+  h1
+    margin 0
+    text-align center
+    font-size 30px
+    font-weight 400
+    text-transform uppercase
+    color var(--main)
+  h2
+    margin 0
+    text-align center
+    font-size 20px
+    font-weight 400
+    color var(--main)
+    margin-top 6px
+  .stick
+    margin 20px auto
+.main-services
+  display grid
+  grid-template-columns 1fr 1fr 1fr 1fr 1fr 1fr
+  grid-gap 4px
+  @media (max-width: 1279px)
+    grid-template-columns 1fr 1fr 1fr
+    padding 0 15px
+    row-gap 38px
+  @media (max-width: 767px)
+    grid-template-columns 1fr 1fr
+    padding 0
+  picture
+    display block
+    width 100%
+  img
+    display block
+    width 100%
+  &__item
+    text-decoration none
+    &::after
+      content ''
+      display block
+      width 12px
+      height 12px
+      margin 15px auto 0
+    &:nth-child(1)::after
+      background #7f3e64
+    &:nth-child(2)::after
+      background #7c506a
+    &:nth-child(3)::after
+      background #9c3b74
+    &:nth-child(4)::after
+      background #796270
+    &:nth-child(5)::after
+      background #89215e
+    &:nth-child(6)::after
+      background #797478
+    h3
+      color #626262
+      font-size 14px
+      text-align center
+      margin-top 15px
+  a:hover
+    h3
+      color var(--main)
+.next-section
+  display block
+  margin auto
+  width 25px
+  height 25px
+  border-bottom 3px solid var(--main)
+  border-right 3px solid var(--main)
+  transform rotate(45deg)
+  margin-top 60px
+  cursor pointer
+  animation: blink 2s infinite
+
+@keyframes blink {
+	0% {
+		opacity 1
+	}
+	50% {
+		opacity .1
+	}
+  100% {
+		opacity 1
+	}
+}

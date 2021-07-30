@@ -1,0 +1,82 @@
+.radio
+  &__carousel
+    width 870px
+    margin auto
+    @media (max-width: 1279px)
+      width 348px
+    @media (max-width: 767px)
+      width 170px
+    .slick-list
+      margin 0 -2.5px
+      &::before
+      &::after
+        display none
+    .slick-prev
+      left -70px
+      top 135px
+      @media (max-width: 1279px)
+        left -130px
+        top 270px
+      @media (max-width: 767px)
+        left calc((50vw - 85px) / -2 - 10px)
+    .slick-next
+      right -70px
+      top 135px
+      @media (max-width: 1279px)
+        right -130px
+        top 270px
+      @media (max-width: 767px)
+        right calc((50vw - 85px) / -2 - 10px)
+  &__img
+    width 100%
+    height 264px
+    display flex
+    align-items center
+    justify-content center
+    object-fit cover
+    transition .5s
+    overflow hidden
+    picture
+      width 100%
+      display block
+    img
+      display block
+      min-width 100%
+      border-radius 10px
+      margin-top 0
+      transition .5s
+  &__column
+    margin 0 2.5px
+    display grid !important
+    grid-template-columns 1fr 1fr
+    grid-gap 5px
+    @media (max-width: 1279px)
+      grid-template-columns 1fr
+      grid-gap 20px
+  &__item
+    position relative
+    border-radius 10px
+    overflow hidden
+    margin 0 2.5px
+    @media (max-width: 1279px)
+      margin 0
+    h3
+      background #f8f8f8
+      width 100%
+      height 70px
+      display flex
+      align-items center
+      justify-content center
+      position absolute
+      bottom 0
+      left 0
+      margin 0
+      font-size 15px
+      color #636363
+      transition .5s
+      opacity .95
+    &:hover
+      .radio__img img
+        filter blur(5px)
+      h3
+        color var(--main)

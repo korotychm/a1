@@ -1,0 +1,52 @@
+.slick-slide
+  outline none !important
+.slick-list
+  margin 0 -7px
+.slick-arrow
+  font-size 0
+  background none
+  width 20px
+  height 45px
+  box-shadow none
+  border none
+  background url(img/icons/arrow.svg) no-repeat center
+  background-size contain
+  transform translateY(-50%)
+  position absolute
+  top 50%
+  right -75px
+  cursor pointer
+  transition filter .5s, opacity .5s
+  &:active
+    filter grayscale(100%)
+    opacity .8
+  &:hover
+    @media (hover)
+      filter grayscale(100%)
+      opacity .8
+        
+.slick-prev
+  right auto
+  left -70px
+  transform rotate(180deg) translateY(50%)
+.slick-dots
+  display flex
+  justify-content center
+  list-style none
+  margin 0
+  padding 0
+  li
+    &:only-child
+      display: none
+  button
+    font-size 0
+    background none
+    width 12px
+    height 12px
+    border 2px solid #b5b5b5
+    border-radius 50%
+    padding 0
+    margin 0 3px
+  .slick-active
+    button
+      border 2px solid var(--main)

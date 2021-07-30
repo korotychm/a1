@@ -1,0 +1,113 @@
+.tech
+  &__carousel
+    width 1092px
+    margin auto
+    @media (max-width: 1279px)
+      width 546px
+    @media (max-width: 767px)
+      width 256px
+    .slick-list
+      margin 0 -3px
+      &::before
+      &::after
+        display none
+    .slick-prev
+      left -70px
+      top 100px
+      @media (max-width: 1279px)
+        top 240px
+      @media (max-width: 767px)
+        left calc((50vw - 128px) / -2 - 10px)
+    .slick-next
+      right -70px
+      top 100px
+      @media (max-width: 1279px)
+        top 240px
+      @media (max-width: 767px)
+        right calc((50vw - 128px) / -2 - 10px)
+  &__content
+    padding 5px 0
+    background #797478
+  &__text
+    position absolute
+    top 5px
+    left 0
+    width 100%
+    height 195px
+    border-top 5px solid #fff
+    border-bottom 5px solid #fff
+    padding 0 45px
+    display flex
+    justify-content center
+    align-items center
+    text-align center
+    font-size 15px
+    line-height 21px
+    color #fff
+    opacity 0
+    transition .5s
+    @media (max-width: 767px)
+      padding 0 35px
+  &__item
+    position relative
+    text-decoration none
+    display block
+    color #626262
+    transition .5s
+    cursor pointer
+    &:hover
+      .tech__text
+        opacity 1
+    h3
+      text-align center
+      font-size 15px
+      margin 10px 0 0
+      span
+        text-transform uppercase
+  &__column
+    display grid !important
+    grid-template-columns minmax(0,1fr) minmax(0,1fr)
+    grid-gap 5px
+    padding 0 2.5px
+    @media (max-width: 1279px)
+      grid-template-columns minmax(0,1fr);
+      grid-gap 30px
+    &:nth-child(odd)
+      .tech__item:nth-child(1)
+        &:hover
+          color #797478
+        .tech__content
+        .tech__text
+          background #797478
+      .tech__item:nth-child(2)
+        &:hover
+          color #823161
+        .tech__content
+        .tech__text
+          background #823161
+    &:nth-child(even)
+      .tech__item:nth-child(1)
+        &:hover
+          color #7c506a
+        .tech__content
+        .tech__text
+          background #7c506a
+      .tech__item:nth-child(2)
+        &:hover
+          color #796270
+        .tech__content
+        .tech__text
+          background #796270
+
+  &__img
+    display flex
+    align-items center
+    justify-content center
+    object-fit cover
+    width 100%
+    height 195px
+    background #fff
+    padding 5px 0
+    overflow hidden
+    border-top 4px solid #fff
+    border-bottom 4px solid #fff

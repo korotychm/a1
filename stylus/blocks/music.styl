@@ -1,0 +1,577 @@
+.music
+  &__img-wrap
+    height 88px
+    @media (max-width: 767px)
+      height 95px
+  &__img
+    height 83px
+    width 100%
+    border-bottom 3px solid #fff
+    display flex
+    align-items center
+    justify-content center
+    overflow hidden
+    position relative
+    &::before
+      content ''
+      width 100%
+      height 100%
+      display block
+      position absolute
+      top 0
+      left 0
+      background #fff
+    @media (max-width: 767px)
+      height 90px
+      overflow hidden
+      img
+        position absolute !important
+        height 100%
+        width auto
+        left 50%
+        transform translateX(-50%)
+    picture
+    img
+      position relative
+      display block
+      height auto
+      width auto
+      transition .5s
+      min-width 100%
+      min-height 100%
+  &__title
+    display flex
+    align-items center
+    color #626262
+    padding-top 15px
+    padding-left 20px
+    h3
+      margin 0
+      font-weight 400
+      font-size 16px
+      display inline-block
+      position relative
+      &::after
+        content ''
+        width 100%
+        max-width 0
+        height 1px
+        background var(--main)
+        position absolute
+        bottom 0
+        left 0
+        transition .5s
+  &__btn
+    margin-right 22px
+  &__icon
+    width 40px
+    height 40px
+    align-items center
+    justify-content center
+    color inherit
+    border-radius 50%
+    border 1px solid #626262
+    display none
+    &--play
+      padding-left 3px
+      padding-bottom .5px
+    &.active
+      display flex
+    svg
+      display block
+  &__column
+    margin 0 1.5px
+    display grid !important
+    grid-template-columns 1fr 1fr 1fr
+    grid-gap 25px
+    grid-column-gap 3px
+    @media (max-width: 1279px)
+      grid-template-columns 1fr 1fr
+    @media (max-width: 767px)
+      grid-template-columns 1fr
+  &__carousel
+    width 905px
+    margin auto
+    margin-bottom 45px
+    @media (max-width: 1279px)
+      width 605px
+    @media (max-width: 767px)
+      width 245px
+    .slick-list
+      margin 0 -1.5px
+    .slick-prev
+      left -90px
+      top 140px
+      @media (max-width: 1279px)
+        top 210px
+        left -60px
+      @media (max-width: 767px)
+        top 225px
+        left calc((50vw - 123px) / -2 - 10px)
+    .slick-next
+      right -90px
+      top 140px
+      @media (max-width: 1279px)
+        top 210px
+        right -60px
+      @media (max-width: 767px)
+        top 225px
+        right calc((50vw - 123px) / -2 - 10px)
+  &__item.active
+    .music__img img
+      filter blur(2px)
+    .music__title
+      color var(--main)
+    .music__icon
+      border-color var(--main)
+      border-width 2px
+      svg path
+        fill var(--main)
+  &__item:hover
+    @media (hover)
+      .music__img img
+        filter blur(2px)
+      .music__title
+        color var(--main)
+      .music__icon
+        border-color var(--main)
+        border-width 2px
+        svg path
+          fill var(--main)
+  &__item.active
+    .music__title h3::after
+      max-width 200px
+
+  &__numbers-wrap
+    height 175px
+    background url(img/bg/music-numbers.jpg) no-repeat center
+    background-size cover
+    display flex
+    justify-content center
+    align-items flex-end
+    @media (max-width: 767px)
+      background-position -1000px center
+    @media (max-width: 767px)
+      width calc(100% - 70px)
+      margin auto
+      height auto
+  &__numbers
+    width 780px
+    display flex
+    justify-content space-between
+    align-items flex-end
+    position relative
+    @media (max-width: 1279px)
+      width 666px
+    @media (max-width: 767px)
+      flex-direction column
+      justify-content flex-end
+      align-items center
+      height 445px
+      &::before
+        content ''
+        width 100vw
+        background #fff
+        display block
+        position absolute
+        height 40px
+        top 120px
+        left 50%
+        transform translateX(-50%)
+      &::after
+        content ''
+        width 100vw
+        background #fff
+        display block
+        position absolute
+        height 40px
+        top 280px
+        left 50%
+        transform translateX(-50%)
+  &__number
+    background var(--main)
+    color #fff
+    padding 0 30px
+    display flex
+    align-items center
+    justify-content center
+    text-align center
+    position relative
+    height 0
+    transition 1.5s
+    width 160px
+    h3
+      position absolute
+      top -75px
+      font-size 30px
+    h4
+      margin 0
+      font-size 14px
+      opacity 0
+    &.active
+      height 80px
+      @media (max-width: 767px)
+        height 70px !important
+      h4
+        opacity 1
+        transition 2s opacity 1s
+  &__number-wrap
+    position relative
+    &:nth-of-type(2) .music__number.active
+      height 105px
+    &:nth-of-type(3) .music__number.active
+      height 60px
+    @media (max-width: 767px)
+      display flex
+      align-items flex-end
+      margin-top 70px
+      margin-bottom 25px
+      z-index 3
+      height 80px
+      &:last-child
+        margin-bottom -15px
+  &__examples
+    width 1160px
+    margin auto
+    display flex
+    flex-wrap wrap
+    .slick-list
+      margin 0
+
+    @media (max-width: 1279px)
+      width 620px
+      background #f9f9f9
+      border-radius 15px
+      padding 0 120px
+      justify-content space-between
+    @media (max-width: 767px)
+      width 240px
+      padding 50px 50px 0
+      display block
+      .slick-arrow
+        top 200px
+      .slick-prev
+        left calc((50vw - 10px) / -2 - 10px)
+      .slick-next
+        right calc((50vw - 10px) / -2 - 10px)
+  &__example-img
+    width 140px
+    height 140px
+    display flex
+    align-items center
+    justify-content center
+    border-radius 10px
+    overflow hidden
+    position relative
+    margin 0
+    picture
+      object-fit cover
+    img
+      transition .5s
+    .music__btn
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-50%,-50%)
+      color #fff
+      margin 0
+    .music__icon
+      border 1px solid #fff
+      svg path
+        fill: none
+      &--stop svg path
+        stroke #fff
+  &__example
+    padding 50px 50px 50px
+    height 250px
+    background #f9f9f9
+    position relative
+    border-radius 15px
+    @media (max-width: 1279px)
+      padding 50px 0 0 !important
+      border-radius 0
+      &::before
+        content ''
+        width 140px
+        display block
+        position absolute
+        background #fff
+        height 5px
+        top -2.5px
+        @media (max-width: 767px)
+          top -30px
+      &:nth-child(1)::before
+      &:nth-child(2)::before
+        display none
+      &:nth-child(2)::before
+        @media (max-width: 767px)
+          display block
+    @media (max-width: 767px)
+      margin 0 !important
+      width 140px
+      padding 0 !important
+      height 225px
+    .music__icon--stop svg rect
+      fill #fff
+    h3
+      margin 0
+      font-size 16px
+      font-weight 400
+      transition .5s
+      text-align center
+      margin-top 10px
+      @media (max-width: 767px)
+        margin-top 13px
+    &:nth-child(1)
+    &:nth-child(4)
+    &:nth-child(6)
+    &:nth-child(9)
+      padding-right 0
+      border-top-right-radius 0
+      border-bottom-right-radius 0
+    &:nth-child(2)
+    &:nth-child(5)
+    &:nth-child(7)
+    &:nth-child(10)
+      border-top-left-radius 0
+      border-bottom-left-radius 0
+    &:nth-child(3)
+    &:nth-child(8)
+      margin 0 30px
+      @media (max-width: 1279px)
+        margin 0
+    &:hover
+    &.active
+      .music__icon
+        border 2px solid #fff
+        svg path
+          fill: #fff
+      .music__example-img img
+        filter blur(2px)
+      h3
+        color var(--main)
+    &:nth-child(6)
+    &:nth-child(7)
+    &:nth-child(8)
+    &:nth-child(9)
+    &:nth-child(10)
+      padding-top 29px
+      border-top-left-radius 0
+      border-top-right-radius 0
+    &:nth-child(1)
+    &:nth-child(2)
+    &:nth-child(3)
+    &:nth-child(4)
+    &:nth-child(5)
+      border-bottom-left-radius 0
+      border-bottom-right-radius 0
+    &:nth-child(6)::before
+    &:nth-child(7)::before
+    &:nth-child(8)::before
+    &:nth-child(9)::before
+    &:nth-child(10)::before
+      content ''
+      width 140px
+      display block
+      position absolute
+      background #fff
+      height 5px
+      top -2.5px
+  &__triggers
+    width 820px
+    margin auto
+    display grid
+    grid-template-columns 1fr 1fr 1fr
+    grid-gap 5px
+    @media (max-width: 1279px)
+      grid-template-columns 1fr
+      width 270px
+  &__trigger
+    padding-top 35px
+    height 230px
+    background #f9f9f9
+    text-align center
+    &-img
+      width 110px
+      height 110px
+      border 5px solid #fff
+      display flex
+      align-items center
+      justify-content center
+      margin auto
+      img
+        display block
+        border 5px solid #fff
+    h3
+      font-size 15px
+      text-transform uppercase
+      font-weight 400
+      color #626262
+      max-width 100px
+      margin auto
+      margin-top 10px
+      line-height 21px
+  &__offers-carousel
+    width 1200px
+    margin auto
+    @media (max-width: 1279px)
+      width 560px
+    @media (max-width: 767px)
+      width 240px
+    .slick-prev
+      left -80px
+      @media (max-width: 1279px)
+        left -65px
+      @media (max-width: 767px)
+        left calc((50vw - 120px) / -2 - 10px)
+    .slick-next
+      right -80px
+      @media (max-width: 1279px)
+        right -75px
+      @media (max-width: 767px)
+        right calc((50vw - 120px) / -2 - 10px)
+    .slick-list
+      margin 0 -40px
+      @media (max-width: 767px)
+        margin 0
+      &::before
+      &::after
+        content ''
+        background #fff
+        display block
+        width 40px
+        height 100%
+        position absolute
+        top 0
+        left 0
+        z-index 2
+        @media (max-width: 767px)
+          display none
+      &::after
+        left auto
+        right 0
+  &__offers-column
+    background #f9f9f9
+    border-radius 15px
+    margin 0 40px
+    position relative
+    @media (max-width: 767px)
+      margin 0
+    &::after
+      content ''
+      width 160px
+      display block
+      position absolute
+      background #fff
+      height 5px
+      top 50%
+      left 50%
+      transform translate(-50%,-50%)
+  &__offers-img
+    width 160px
+    height 160px
+    margin auto
+    border 5px solid #fff
+    border-radius 50%
+    overflow hidden
+    display flex
+    align-items center
+    justify-content center
+    position relative
+    &::after
+      content 'подробнее'
+      color #fff
+      font-size 15px
+      font-weight bold
+      text-decoration underline
+      position absolute
+      top 50%
+      left 50%
+      transform translate(-50%,-50%)
+      opacity 0
+      transition .5s
+    picture
+      object-fit cover
+    img
+      transition .5s
+  &__offers-item
+    height 280px
+    padding-top 40px
+    display block
+    text-decoration none
+    h4
+      margin auto
+      text-align center
+      max-width 150px
+      margin-top 15px
+      font-size 15px
+      font-weight 400
+      color #434343
+      transition .5s
+    &:hover
+      @media (hover)
+        h4
+          color var(--main)
+        .music__offers-img
+          &::after
+            opacity 1
+          img
+            filter blur(2px)
+
+.royaltyfree
+  background url(img/bg/royaltyfree.jpg)
+  width 214px
+  height 214px
+  margin auto
+  color #fff
+  display flex
+  align-items center
+  justify-content center
+  text-align center
+  &__wrap
+    width 145px
+    height 145px
+    border 1px solid #fff
+    display flex
+    align-items center
+    justify-content center
+    flex-direction: column
+    padding-bottom 15px
+    span
+      font-size 16px
+      &:first-child
+        font-size 24px
+      &:nth-child(2)
+        font-size 17px
+        font-weight bold
+        margin 3px 0 4px
+.partners1
+  width 555px
+  margin auto
+  display flex
+  justify-content space-between
+  align-items center
+  height 150px
+  position relative
+  margin-top 40px
+  margin-bottom 50px
+  @media (max-width: 767px)
+    width 280px
+  .stick
+    height 150px
+    margin 0
+  &__logo
+    width 210px
+    @media (max-width: 767px)
+      width 90px
+    img
+      display block
+      width 100%
+      height auto
+    .hidden-desktop
+      display none
+      @media (max-width: 767px)
+        display block
+    .hidden-mobile
+      @media (max-width: 767px)
+        display none

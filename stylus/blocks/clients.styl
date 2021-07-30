@@ -1,0 +1,30 @@
+.clients
+  *
+    outline none
+  &__carousel
+    width 817px
+    margin auto
+    @media (max-width: 1279px)
+      width 485px
+    @media (max-width: 767px)
+      width 154px
+      .slick-prev
+        left calc((50vw - 77px) / -2 - 10px)
+      .slick-next
+        right calc((50vw - 77px) / -2 - 10px)
+
+  &__column
+    display grid !important
+    grid-template-columns 1fr
+    grid-gap 15px
+    margin 0 7px
+  &__item
+    border 1px solid var(--main)
+    height 82px
+    display flex
+    align-items center
+    justify-content center
+    object-fit contain
+    img
+      display block
+      max-width 100%
